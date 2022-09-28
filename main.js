@@ -16,7 +16,7 @@ const contenedorNoticia = document.querySelector(".main__noticias")
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '998aece269msh14cc2a29cde7443p1003fajsn1c673c092018',
+		'X-RapidAPI-Key': 'KEY',
 		'X-RapidAPI-Host': 'free-news.p.rapidapi.com'
 	}
 };
