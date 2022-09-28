@@ -6,7 +6,7 @@ const menuScreen =  document.querySelector('.menu-screen')
 
 menu.addEventListener('click', () => {
     menu.classList.toggle('active')
-    menuScreen.classList.toggle('flex')
+    menuScreen.classList.toggle('visible')
 })
 
 // News api

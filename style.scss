@@ -43,7 +43,8 @@ body {
     top: 80px;
     background-color: #222;
     flex-flow: row wrap;
-    display: none;
+    display: flex;
+    visibility: hidden;
     justify-content: space-evenly;
     align-items: center;
     transition: 0.2s;
@@ -219,14 +220,21 @@ body {
                     margin-bottom: 20px;
                     color: #666;
                     font-size: 1.2rem;
+                    @include mq (500px) {
+                        left: 30px;
+                        bottom: 0;
+                    }
                 }
                 .main__noticias--noticia__date {
                     position: absolute;
-                    bottom: 0;
+                    bottom: 0px;
                     left: 30px;
                     margin-bottom: 20px;
                     color: #666;
                     font-size: 1.2rem;
+                    @include mq (500px) {
+                        bottom: 25px;
+                    }
                 }
                 .main__noticias--noticia__summary {
                     color: #666;
@@ -236,6 +244,9 @@ body {
                     -webkit-line-clamp: 4;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
+                    @include mq (500px) {
+                        margin-bottom: 60px;
+                    }
                 }
             }
         }
@@ -281,6 +292,12 @@ body {
     }
 }
 
-.flex {
+.visible {
+    visibility: hidden;
+    transform: translate(0,0);
+    transition: 0.2s;
     display: flex;
+    @include mq () {
+        visibility: visible;
+    }
 }
